@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Vitrine &amp; Co · Création de sites vitrines pour artisans dans le Tarn</title>
+  <!-- ✏️ Texte affiché par Google sous le titre (150 caractères environ) -->
+  <meta name="description" content="Création de sites vitrines pour artisans et commerçants à Soual, Castres et dans le Tarn. Dès 290 €, en ligne en 5 jours, pensés pour le téléphone.">
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="theme-color" content="#16110d">
+
+  <!-- ✏️ Adresse du site une fois en ligne (à changer si tu prends un nom de domaine) -->
+  <link rel="canonical" href="https://vitrine-co.github.io/Hub/">
+
+  <!-- Icônes (onglet du navigateur, écran d'accueil du téléphone) -->
+  <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Aperçu du lien partagé sur WhatsApp, Instagram, Facebook… (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Vitrine &amp; Co">
+  <meta property="og:title" content="Vitrine &amp; Co · Sites vitrines pour artisans dans le Tarn">
+  <meta property="og:description" content="Des sites rapides et soignés pour les artisans et commerçants de Soual, Castres et alentours. Dès 290 €, en ligne en 5 jours.">
+  <meta property="og:url" content="https://vitrine-co.github.io/Hub/">
+  <meta property="og:image" content="https://vitrine-co.github.io/Hub/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vitrine &amp; Co, sites vitrines à Soual dans le Tarn">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fiche entreprise pour Google (Schema.org LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vitrine & Co",
+    "description": "Création de sites vitrines sur-mesure pour artisans et commerçants.",
+    "url": "https://vitrine-co.github.io/Hub/",
+    "image": "https://vitrine-co.github.io/Hub/og-image.jpg",
+    "logo": "https://vitrine-co.github.io/Hub/apple-touch-icon.png",
+    "telephone": "+33628517237",
+    "email": "vitrine-co@mail.fr",
+    "founder": { "@type": "Person", "name": "Dimitri Couilleaux" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Soual", "postalCode": "81580", "addressRegion": "Occitanie", "addressCountry": "FR" },
+    "areaServed": [ { "@type": "AdministrativeArea", "name": "Tarn" }, { "@type": "City", "name": "Castres" }, { "@type": "City", "name": "Soual" } ],
+    "priceRange": "290 € – 790 €",
+    "sameAs": ["https://www.instagram.com/vitrine_and_co/"]
+  }
+  </script>
+
+  <!--
+    Polices hébergées avec le site (dossier fonts/) : plus rapide que Google Fonts.
+    "Archivo" et "Instrument Serif" servent à l'interface. Les autres donnent à chaque
+    projet sa personnalité dans l'aperçu du téléphone (voir --pfont dans chaque projet).
+  -->
+  <link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    /* Polices hébergées sur le site (sous-ensemble latin, woff2). Licence : SIL Open Font License. */
+    @font-face { font-family: 'Anton'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/anton.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('fonts/archivo.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/bodoni-moda-600.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/instrument-serif-italic.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/instrument-serif.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Italiana'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/italiana.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Young Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/young-serif.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  </style>
+
+  <style>
+    /* =========================================================
+       1. RÉGLAGES GÉNÉRAUX
+       Les couleurs de chaque projet sont dans son <article class="projet"> (attribut style).
+       ========================================================= */
+    :root {
+      --ui: #f3efe8;                 /* texte de l'interface (en-tête, barre du bas) */
+      --font: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+      --ease: cubic-bezier(.22, .9, .25, 1);
+      --gx: max(5vw, 20px, env(safe-area-inset-left, 0px));  /* marge latérale */
+      --top: calc(env(safe-area-inset-top, 0px) + 96px);      /* espace réservé à l'en-tête (la carte se centre dans l'espace restant) */
+      --bottom: calc(env(safe-area-inset-bottom, 0px) + 158px); /* espace réservé à la barre du bas */
+      --px: clamp(12px, 2vw, 30px);    /* de combien les cartes du dessous dépassent tout autour */
+      --tilt: 1;                       /* intensité de l'inclinaison des cartes du dessous */
+    }
+    *, *::before, *::after { box-sizing: border-box; min-width: 0; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      /* Le fond de la page prend une version sombre des couleurs de la carte du dessus */
+      background-color: color-mix(in srgb, var(--slide-bg, #16110d) 48%, #0b0a09);
+      color: var(--ui);
+      font: 16px/1.55 var(--font);
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    [hidden] { display: none !important; }
+    button { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+    /* =========================================================
+       2. EN-TÊTE FIXE
+       ========================================================= */
+    .head {
+      position: fixed; inset: 0 0 auto; z-index: 10;
+      padding: calc(env(safe-area-inset-top, 0px) + 24px) var(--gx) 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      pointer-events: none;
+    }
+    .head > * { pointer-events: auto; }
+    .brand { margin: 0; font: inherit; }   /* h1 : titre principal de la page (SEO) */
+    .brand a { text-decoration: none; display: flex; align-items: baseline; gap: 18px; }
+    .brand b { font: 400 28px/1 var(--serif); letter-spacing: -.01em; white-space: nowrap; }
+    .brand span { font-size: 13px; opacity: .75; max-width: 34ch; line-height: 1.35; }
+    .links { display: flex; gap: 8px; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px;
+      border: 1px solid color-mix(in srgb, currentColor 35%, transparent); border-radius: 999px; background: none;
+      font-weight: 500; font-size: 14px; text-decoration: none; cursor: pointer; white-space: nowrap;
+      transition: background .3s, color .3s, border-color .3s;
+    }
+    .pill:hover { background: var(--ui); color: #111; border-color: var(--ui); }
+    .pill svg { width: 16px; height: 16px; }
+
+    /* =========================================================
+       3. LE PAQUET DE CARTES À JOUER (une carte = un projet)
+       Format d'une carte à jouer classique (5 × 7, portrait).
+       La carte du dessus est devant ; les suivantes sont glissées
+       dessous, décalées et inclinées pour dépasser tout autour.
+       --d = profondeur (0 = dessus), --sx / --sy / --rot posés par le script.
+       ========================================================= */
+    .rail {
+      position: relative; z-index: 1;
+      height: 100%;
+      overflow: hidden;
+      touch-action: pan-y;           /* le glissement horizontal est géré en JS */
+      transition: opacity .35s var(--ease);
+    }
+    .rail.is-fading { opacity: 0; }
+
+    .slide {
+      /* Taille de la carte : la plus grande carte 5×7 qui tient dans l'espace libre */
+      --ah: calc(100svh - var(--top) - var(--bottom));
+      --w: min(calc(var(--ah) * 5 / 7), 84vw, 500px);
+      position: absolute;
+      width: var(--w);
+      aspect-ratio: 5 / 7;
+      left: calc(50% - var(--w) / 2);
+      top: calc(var(--top) + (var(--ah) - var(--w) * 7 / 5) / 2);
+      container-type: size;          /* tout l'intérieur se dimensionne d'après la carte (unités cqw) */
+      background: var(--bg);
+      color: var(--ink);
+      overflow: hidden;
+      border-radius: 18px;
+      z-index: calc(50 - var(--d, 0));
+      transform-origin: center;
+      transform:
+        translate(calc(var(--sx, 0) * var(--px)), calc(var(--sy, 0) * var(--px)))
+        rotate(calc(var(--rot, 0) * var(--tilt) * 1deg))
+        scale(calc(1 - var(--d, 0) * .015));
+      box-shadow: 0 1px 0 rgba(255,255,255,.14) inset, 0 24px 50px -30px rgba(0,0,0,.75);
+      animation: deal .9s var(--ease) both;
+      animation-delay: calc((3 - var(--d, 0)) * 90ms + 80ms);
+      cursor: pointer;
+      user-select: none;
+      will-change: transform;          /* la carte a son propre calque : déplacements fluides */
+      transition: transform .62s cubic-bezier(.2, .85, .25, 1), opacity .5s ease;
+    }
+    @keyframes deal {
+      from { translate: 0 60px; opacity: 0; }
+      to   { translate: 0 0; opacity: 1; }
+    }
+    /* Voile sombre sur les cartes du dessous */
+    .slide::before {
+      content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none;
+      background: #000; opacity: var(--voile, calc(var(--d, 0) * .14));
+      transition: opacity .6s var(--ease);
+    }
+    .slide.is-active { cursor: grab; box-shadow: 0 1px 0 rgba(255,255,255,.16) inset, 0 50px 90px -40px rgba(0,0,0,.85); }
+    .slide.is-dragging { transition: none; }   /* pendant le geste, les cartes suivent le doigt sans retard */
+    .slide.is-active.is-dragging { cursor: grabbing; }
+    .slide.is-past { transform: translateX(calc(-100vw - 10%)) rotate(-8deg); opacity: 0; pointer-events: none; }
+    .slide.is-far { opacity: 0; pointer-events: none; }
+
+    /* --- Intérieur de la carte --- */
+    .face {
+      position: absolute; inset: 0;
+      display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto;
+      gap: 3.6cqw;
+      padding: 5.5cqw;
+    }
+    /* Liseré intérieur, comme sur une carte à jouer */
+    .face::after {
+      content: ""; position: absolute; inset: 2.6cqw; pointer-events: none;
+      border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+      border-radius: 11px;
+    }
+    /* Index des coins : initiale + symbole du métier (la "couleur" de la carte) */
+    .top, .bottom { display: flex; align-items: center; justify-content: space-between; gap: 3cqw; position: relative; z-index: 1; }
+    .index { display: flex; flex-direction: column; align-items: center; gap: .6cqw; width: 9cqw; line-height: 1; padding-left: 1cqw; }
+    .index b { font: 400 9.4cqw/.9 var(--serif); }
+    .index svg { width: 5.4cqw; height: 5.4cqw; color: var(--accent); --site-art: var(--bg); }
+    .bottom .index { transform: rotate(180deg); padding: 0 1cqw 0 0; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 1.8cqw;
+      padding: 1.3cqw 3cqw 1.3cqw 2.4cqw; border-radius: 999px;
+      font-size: clamp(11px, 2.9cqw, 14px); font-weight: 500; white-space: nowrap;
+      border: 1px solid color-mix(in srgb, var(--ink) 25%, transparent);
+    }
+    .badge::before { content: ""; width: 1.6cqw; height: 1.6cqw; border-radius: 50%; background: var(--accent); }
+
+    .info { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 2cqw; padding-inline: 1cqw; }
+    .client { margin: 0; font-size: clamp(11px, 2.8cqw, 14px); opacity: .85; }
+    .info h2 { margin: 0; font: 400 clamp(24px, 7.6cqw, 42px)/1 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+    .info .desc { margin: 0; font-size: clamp(12px, 3.2cqw, 16px); line-height: 1.45; opacity: .8;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .feats { list-style: none; margin: .6cqw 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1.6cqw; }
+    .feats li { font-size: clamp(11px, 2.7cqw, 13px); font-weight: 500; padding: 1.1cqw 2.4cqw; border-radius: 6px; background: color-mix(in srgb, var(--ink) 9%, transparent); white-space: nowrap; }
+    .cta {
+      display: inline-flex; align-items: center; gap: 2.4cqw;
+      min-height: max(42px, 10.4cqw); padding: 0 4.4cqw 0 5cqw; border-radius: 999px;
+      background: var(--ink); color: var(--bg);
+      font-weight: 600; font-size: clamp(13px, 3.3cqw, 16px); text-decoration: none; white-space: nowrap;
+      transition: gap .35s var(--ease), background .3s, color .3s;
+    }
+    .cta svg { width: 1.2em; height: 1.2em; }
+    .liens { display: flex; align-items: center; gap: 3.4cqw; min-width: 0; }
+    .cas-lien { font-size: clamp(12px, 3cqw, 15px); font-weight: 500; text-underline-offset: 4px; text-decoration-thickness: 1px; white-space: nowrap; }
+    .cas-lien:hover { text-decoration-thickness: 2px; }
+
+    .cta:hover { gap: 3.6cqw; background: var(--accent); color: var(--on-accent); }
+
+    /* --- Aperçu du site : un téléphone qui sort du bas de la zone d'aperçu --- */
+    .vis { position: relative; z-index: 1; min-height: 0; transition: transform .8s var(--ease); }
+    .slide.is-active:hover .vis { transform: translateY(-1cqw); }
+    .v-tel { position: absolute; inset: 0; border-radius: 10px; overflow: hidden; background: color-mix(in srgb, var(--ink) 9%, transparent); }
+    .v-tel::before {   /* lumière douce derrière le téléphone */
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 66% 30%, color-mix(in srgb, var(--ink) 14%, transparent), transparent 60%);
+    }
+    .phone {
+      position: absolute; left: 44cqw; top: 5cqw; width: 39cqw; aspect-ratio: 9 / 18.5;
+      padding: 1.4cqw; border-radius: 6.6cqw; background: #101010;
+      box-shadow: inset 0 0 0 .35cqw #2a2a2a, 0 24px 44px -18px rgba(0,0,0,.75);
+      transform: rotate(4deg); transform-origin: 50% 100%;
+    }
+    .screen {
+      position: relative; height: 100%; overflow: hidden; border-radius: 5.3cqw;
+      background: var(--site-bg); color: var(--site-ink); font-family: var(--pfont);
+      display: flex; flex-direction: column; gap: 2.4cqw; padding: 6.4cqw 3.4cqw 3cqw;
+    }
+    .screen::before { content: ""; position: absolute; top: 1.5cqw; left: 50%; width: 10cqw; height: 2.6cqw; margin-left: -5cqw; border-radius: 99px; background: #101010; z-index: 1; }
+    /* Capture : une barre d'état (couleur du haut du site, --site-bar) accueille l'encoche,
+       puis la capture sur toute la largeur de l'écran, sans rognage sur les côtés */
+    .screen.capture { padding: 0; background: var(--site-bar, var(--site-bg)); }
+    .screen.capture img { position: absolute; top: 5.4cqw; left: 0; right: auto; bottom: auto; width: 100%; height: auto; object-fit: initial; }
+    .ph-top { display: flex; justify-content: space-between; align-items: center; gap: 2cqw; font-size: clamp(8px, 2.3cqw, 12px); }
+    .ph-top b { font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ph-top i { flex: none; width: 3.6cqw; height: 1.8cqw; border-block: .45cqw solid currentColor; }
+    .screen h3 { margin: 0; font-weight: 400; font-size: clamp(12px, 4.4cqw, 22px); line-height: 1.05; letter-spacing: -.01em; }
+    .ph-btn { padding: 1.7cqw; text-align: center; border-radius: var(--site-radius); background: var(--site-ink); color: var(--site-bg); font: 600 clamp(8px, 2.3cqw, 11px)/1 var(--font); }
+    .ph-art { flex: none; height: 22cqw; border-radius: var(--site-radius); background: var(--site-art); display: grid; place-items: center; }
+    .ph-art svg { width: 55%; height: 55%; }
+
+
+    /* --- Apparition du contenu quand la carte passe dessus --- */
+    .slide .face > * { opacity: 0; transform: translateY(1.6cqw); transition: opacity .45s ease, transform .5s var(--ease); }
+    .slide.is-active .face > * { opacity: 1; transform: none; }
+    .slide.is-active .face > :nth-child(2) { transition-delay: .05s; }
+    .slide.is-active .face > :nth-child(3) { transition-delay: .1s; }
+    .slide.is-active .face > :nth-child(4) { transition-delay: .14s; }
+    /* Dos des cartes du dessous : on montre l'index et le liseré, pas le contenu */
+    .slide:not(.is-active) .face > .top, .slide:not(.is-active) .face > .bottom { opacity: 1; transform: none; }
+
+    /* Petites cartes : on retire la description pour que tout reste dans la carte */
+    @container (max-width: 400px) {
+      .info .desc { display: none; }
+    }
+
+    /* --- Carte finale "contact" --- */
+    .end-body { position: relative; z-index: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 3cqw; padding-inline: 1cqw; }
+    .end-body h2 { margin: 0; font: 400 clamp(26px, 8.4cqw, 46px)/1 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+    .end-body p { margin: 0; font-size: clamp(13px, 3.4cqw, 17px); opacity: .8; }
+    .end-mail { font: 400 clamp(17px, 5cqw, 26px)/1.2 var(--serif); text-underline-offset: 5px; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
+    .amp { font: 400 46cqw/.8 var(--serif); opacity: .08; position: absolute; right: 4cqw; top: 14cqw; pointer-events: none; }
+
+
+    /* --- Mention « exemple » : signale un chiffre, un avis ou un prix fictif à remplacer --- */
+    .ex { font: 600 max(.78em, 9px)/1 var(--font); letter-spacing: .08em; text-transform: uppercase; opacity: 1; white-space: nowrap; font-style: normal; }
+
+    /* --- Résultat chiffré : pastille posée sur l'aperçu du site --- */
+    .vis .resultat {
+      position: absolute; right: 3cqw; bottom: 3cqw; z-index: 3; margin: 0; width: 40%;
+      display: flex; flex-direction: column; gap: 1cqw;
+      padding: 2.4cqw 3cqw 2.6cqw; border-radius: 8px;
+      background: var(--ink); color: var(--bg);      /* couleurs inversées de la carte : toujours lisible sur l'aperçu */
+      box-shadow: 0 12px 26px -14px rgba(0,0,0,.6);
+      font-size: clamp(10px, 2.6cqw, 13px); line-height: 1.25;
+    }
+    .vis .resultat .r-haut { display: flex; align-items: baseline; justify-content: space-between; gap: 2cqw; }
+    .vis .resultat b { font: 400 clamp(20px, 6.6cqw, 34px)/1 var(--serif); white-space: nowrap; }
+    .vis .resultat .ex { font-size: clamp(8px, 1.9cqw, 10px); }
+    /* Le résultat devient un grand chiffre posé à gauche du téléphone */
+    .vis .resultat { right: auto; left: 5cqw; bottom: 5cqw; width: 34cqw; padding: 0; background: none; box-shadow: none; color: var(--ink); gap: 1.6cqw; font-size: clamp(11px, 2.9cqw, 14px); }
+    .vis .resultat b { font-size: clamp(32px, 12cqw, 62px); }
+    .vis .resultat .r-haut { flex-direction: column-reverse; align-items: flex-start; gap: 1.4cqw; }
+
+    /* --- Avis client --- */
+    .info:has(.avis) .desc { display: none; }   /* l'avis client prend la place de la description (qui reste dans le HTML pour Google) */
+    .avis { margin: 1cqw 0 0; padding-left: 3cqw; border-left: 1px solid color-mix(in srgb, var(--ink) 40%, transparent); }
+    .avis p { margin: 0; font: italic 400 clamp(14px, 4cqw, 20px)/1.22 var(--serif);
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .avis cite { display: block; margin-top: .8cqw; font-style: normal; font-size: clamp(10px, 2.6cqw, 12px); opacity: .85; }
+
+    /* --- Carte « Offres » --- */
+    .face.offres, .face.end { grid-template-rows: auto minmax(0, 1fr) auto; }
+    .off-body { position: relative; z-index: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 3.4cqw; padding-inline: 1cqw; }
+    .off-body h2 { margin: 0; font: 400 clamp(26px, 8.4cqw, 46px)/1 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+    .formules { list-style: none; margin: 0; padding: 0; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+    .formules li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: .8cqw 3cqw; padding: 2.8cqw 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+    .formules h3 { margin: 0; font: 400 clamp(19px, 5.6cqw, 28px)/1.05 var(--serif); }
+    .formules .prix { margin: 0; white-space: nowrap; font-size: clamp(11px, 2.8cqw, 13px); color: color-mix(in srgb, var(--ink) 70%, transparent); }
+    .formules .prix b { font: 400 clamp(19px, 5.6cqw, 28px)/1 var(--serif); color: var(--accent); }
+    .formules .detail { grid-column: 1 / -1; margin: 0; font-size: clamp(11px, 2.9cqw, 14px); line-height: 1.4; opacity: .75; }
+    .promo { align-self: flex-start; margin: 0; padding: 1cqw 2.8cqw; border-radius: 99px; background: var(--accent); color: var(--on-accent); font-size: clamp(11px, 2.8cqw, 13px); font-weight: 600; }
+    .formules .prix del { margin-right: .3em; opacity: .75; text-decoration-thickness: 1px; }
+    @container (max-width: 330px) {   /* très petite carte : on resserre pour que l'offre tienne */
+      .off-body { gap: 2.4cqw; }
+      .formules li { padding: 2cqw 0; }
+      .off-note { display: none; }
+    }
+    .off-note { margin: 0; font-size: clamp(10px, 2.5cqw, 12px); opacity: .85; }
+
+    /* --- Formulaire de contact --- */
+    .form { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4cqw 3cqw; margin: 0; }
+    .form .plein { grid-column: 1 / -1; }
+    .champ { display: flex; flex-direction: column; gap: .9cqw; }
+    .champ span { font-size: clamp(10px, 2.5cqw, 12px); opacity: .85; }
+    .champ input, .champ textarea {
+      width: 100%; margin: 0; padding: 1.8cqw 2.6cqw;
+      font: 400 16px/1.4 var(--font); color: inherit;           /* 16px : évite le zoom automatique sur iPhone */
+      background: color-mix(in srgb, var(--ink) 7%, transparent);
+      border: 1px solid color-mix(in srgb, var(--ink) 24%, transparent); border-radius: 8px;
+      user-select: text; -webkit-user-select: text;
+      transition: border-color .25s, background .25s;
+    }
+    .champ textarea { resize: none; height: clamp(52px, 16cqw, 92px); }
+    .champ input::placeholder, .champ textarea::placeholder { color: inherit; opacity: .4; }
+    .champ input:focus, .champ textarea:focus { outline: none; border-color: var(--ink); background: color-mix(in srgb, var(--ink) 11%, transparent); }
+    .piege { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }  /* champ anti-robots, invisible */
+    .joindre { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1cqw 4cqw; margin: 0; font-size: clamp(12px, 3cqw, 15px); }
+    .joindre a { text-underline-offset: 4px; text-decoration-thickness: 1px; }
+    .form-etat { margin: 0; min-height: 1.3em; font-size: clamp(11px, 2.8cqw, 14px); }
+    .form-etat:empty { display: none; }
+    button.cta { border: 0; cursor: pointer; }
+    button.cta:disabled { opacity: .6; cursor: progress; }
+
+    @container (max-width: 400px) {
+      .feats { display: none; }          /* petite carte : l'avis client passe avant les tags */
+      .end-body .lead { display: none; }
+    }
+
+    /* --- Sans JavaScript (ou pour les robots) : contenu lisible en simple liste --- */
+    .no-js body { overflow: auto; }
+    .no-js .rail { height: auto; overflow: visible; display: grid; justify-items: center; gap: 32px; padding: 120px var(--gx) 160px; }
+    .no-js .projet { width: min(100%, 560px); padding: 24px; border-radius: 18px; background: var(--bg); color: var(--ink); }
+    .no-js .slide { position: relative; left: auto; top: auto; transform: none; animation: none; }
+    .no-js .slide .face > * { opacity: 1; transform: none; }
+    .rail > .projet .avis, .rail > .projet .resultat { margin-top: 12px; }
+
+
+
+    /* --- Cartes d'information : Qui je suis, Méthode, FAQ --- */
+    .face.info-carte { grid-template-rows: auto minmax(0, 1fr) auto; }
+    .ic-body { position: relative; z-index: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 3cqw; padding-inline: 1cqw; }
+    .ic-body h2 { margin: 0; font: 400 clamp(24px, 7.6cqw, 42px)/1.02 var(--serif); letter-spacing: -.01em; text-wrap: balance; }
+    .ic-body > p { margin: 0; font-size: clamp(12px, 3.2cqw, 16px); line-height: 1.45; opacity: .9; }
+    .qui-haut { display: grid; grid-template-columns: 31cqw minmax(0, 1fr); gap: 4cqw; align-items: end; }
+    .photo { margin: 0; aspect-ratio: 4 / 5; border-radius: 8px; overflow: hidden; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-vide { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.4cqw;
+      border: 1px dashed color-mix(in srgb, var(--ink) 50%, transparent); border-radius: 8px;
+      background: color-mix(in srgb, var(--ink) 6%, transparent); font-size: clamp(10px, 2.5cqw, 12px); }
+    .photo-vide svg { width: 40%; opacity: .6; }
+    .zone-titre { margin: 0 0 1.4cqw; font-size: clamp(10px, 2.5cqw, 12px); letter-spacing: .08em; text-transform: uppercase; opacity: .8; }
+    .zone { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1.4cqw; }
+    .zone li { font-size: clamp(11px, 2.8cqw, 13px); font-weight: 500; padding: 1cqw 2.4cqw; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--ink) 35%, transparent); }
+    .zone li:first-child { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+    .ic-body > .zone-note { font-size: clamp(11px, 2.8cqw, 14px); opacity: .85; }
+
+    .etapes { list-style: none; margin: 0; padding: 0; counter-reset: etape; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+    .etapes li { display: grid; grid-template-columns: 7cqw minmax(0, 1fr) auto; column-gap: 3cqw; align-items: baseline; padding: 2.6cqw 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+    .etapes li::before { counter-increment: etape; content: counter(etape); grid-row: span 2; font: 400 clamp(20px, 6.4cqw, 32px)/1 var(--serif); color: var(--accent); }
+    .etapes h3 { margin: 0; font: 400 clamp(17px, 5cqw, 26px)/1.05 var(--serif); }
+    .etapes .delai { font-size: clamp(10px, 2.6cqw, 13px); white-space: nowrap; padding: .7cqw 2.2cqw; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--ink) 35%, transparent); }
+    .etapes p { grid-column: 2 / -1; margin: .8cqw 0 0; font-size: clamp(11px, 2.9cqw, 14px); line-height: 1.4; opacity: .85; }
+
+    .faq-body { justify-content: flex-start; padding-top: 2cqw; }
+    .faq { min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+    .faq details { border-bottom: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+    .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 3cqw; padding: 2.6cqw 0; font: 400 clamp(16px, 4.6cqw, 23px)/1.15 var(--serif); }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; flex: none; font: 400 1.1em/1 var(--font); opacity: .75; transition: transform .3s var(--ease); }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { margin: 0 0 2.8cqw; font-size: clamp(12px, 3cqw, 15px); line-height: 1.45; opacity: .88; }
+
+    /* --- Mentions légales (fenêtre par-dessus le site) --- */
+    .ml-lien { font-size: clamp(10px, 2.5cqw, 12px); opacity: .85; }
+    .mentions {
+      width: min(560px, calc(100vw - 32px)); max-height: min(80svh, 720px); overflow: auto;
+      padding: 28px 28px 24px; border: 0; border-radius: 18px;
+      background: #f4efe6; color: #231b15; font: 15px/1.55 var(--font);
+      box-shadow: 0 40px 90px -30px rgba(0,0,0,.8);
+    }
+    .mentions::backdrop { background: rgba(10, 9, 8, .6); backdrop-filter: blur(4px); }
+    .mentions h2 { margin: 0 0 14px; font: 400 34px/1 var(--serif); }
+    .mentions h3 { margin: 18px 0 4px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; opacity: .72; }
+    .mentions p { margin: 0; }
+    .mentions .fermer { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(35,27,21,.25); background: none; cursor: pointer; font-size: 20px; line-height: 1; }
+    .mentions .fermer:hover { background: #231b15; color: #f4efe6; }
+
+    /* =========================================================
+       3 bis. FOND STUDIO : un dégradé lisse aux couleurs du projet,
+       plus clair derrière le paquet, plus sombre vers les bords.
+       ========================================================= */
+    .backdrop { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: #0d0c0b; }
+    .scene {
+      position: absolute; inset: 0; opacity: 0;
+      background:
+        radial-gradient(ellipse 62% 58% at 50% 46%,
+          color-mix(in srgb, var(--sbg) 56%, #1c1a18) 0%,
+          color-mix(in srgb, var(--sbg) 34%, #121110) 58%,
+          color-mix(in srgb, var(--sbg) 16%, #0b0a09) 100%);
+      background-size: cover; background-position: center;
+      will-change: opacity;
+    }
+    /* La nouvelle couleur apparaît PAR-DESSUS l'ancienne (fondu enchaîné, sans flash) */
+    .scene.is-on { opacity: 1; transition: opacity 1.4s ease; }
+    /* Ombre douce posée sous le paquet, pour l'ancrer */
+    .backdrop::after {
+      content: ""; position: absolute; inset: 0; z-index: 9999;
+      background: radial-gradient(ellipse 26% 7% at 50% calc(100% - var(--bottom) + 10px), rgba(0, 0, 0, .32), transparent 70%);
+    }
+
+    /* =========================================================
+       4. BARRE DU BAS : filtres, progression, flèches
+       ========================================================= */
+    .foot {
+      position: fixed; inset: auto 0 0; z-index: 10;
+      padding: 0 var(--gx) calc(env(safe-area-inset-bottom, 0px) + 20px);
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px 24px;
+    }
+    .filters { display: flex; gap: 4px; flex-wrap: wrap; grid-column: 1 / -1; }
+    .filter {
+      flex: none; min-height: 36px; padding: 0 14px; border: 0; border-radius: 99px; background: none; cursor: pointer;
+      font-size: 13px; font-weight: 500; opacity: .72; white-space: nowrap; transition: opacity .25s, background .25s;
+    }
+    .filter:hover { opacity: 1; }
+    .filter.is-on { opacity: 1; background: color-mix(in srgb, currentColor 12%, transparent); }
+    .progress { display: flex; align-items: center; gap: 14px; font-size: 13px; font-variant-numeric: tabular-nums; opacity: .85; }
+    .dots { display: flex; gap: 6px; flex: 1; max-width: 360px; }
+    .dot { flex: 1; height: 24px; border: 0; padding: 0; background: none; cursor: pointer; position: relative; }
+    .dot::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: currentColor; opacity: .22; border-radius: 2px; transition: opacity .3s; }
+    .dot.is-on::before { opacity: 1; }
+    .dot:hover::before { opacity: .55; }
+    .arrows { display: flex; gap: 8px; }
+    .arrow {
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 1px solid color-mix(in srgb, currentColor 35%, transparent); background: none; cursor: pointer;
+      display: grid; place-items: center; transition: background .3s, color .3s, opacity .3s, border-color .3s;
+    }
+    .arrow svg { width: 18px; height: 18px; }
+    .arrow:hover:not(:disabled) { background: var(--ui); color: #111; border-color: var(--ui); }
+    .arrow:disabled { opacity: .3; cursor: default; }
+    /* Ligne légale en bas de page */
+    .legal { grid-column: 1 / -1; order: 9; margin: 0; font-size: 11px; opacity: .8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .legal a { text-underline-offset: 3px; }
+
+
+    /* =========================================================
+       5. GRAND ÉCRAN
+       ========================================================= */
+    @media (min-width: 960px) {
+      :root { --top: calc(env(safe-area-inset-top, 0px) + 104px); --bottom: calc(env(safe-area-inset-bottom, 0px) + 118px); --px: clamp(18px, 2.2vw, 30px); }
+      .foot { grid-template-columns: auto minmax(0, 1fr) auto; }
+      .filters { grid-column: auto; }
+      .progress { justify-content: center; }
+    }
+
+    /* =========================================================
+       6. TÉLÉPHONE
+       ========================================================= */
+    @media (max-width: 600px) {
+      :root {
+        --gx: max(16px, env(safe-area-inset-left, 0px));
+        --top: calc(env(safe-area-inset-top, 0px) + 70px);
+        --bottom: calc(env(safe-area-inset-bottom, 0px) + 98px);
+      }
+      .legal-nom { display: none; }
+      :root {
+        --px: 9px;
+      }
+      .head { padding-top: calc(env(safe-area-inset-top, 0px) + 14px); }
+      .brand span { display: none; }
+      .brand b { font-size: 26px; }
+      .pill { min-height: 38px; padding: 0 14px; font-size: 13px; }
+      .pill .ig-name { display: none; }
+      .slide { border-radius: 14px; }
+      /* Barre du bas sur une seule ligne : filtres défilants + flèches */
+      .foot { grid-template-columns: minmax(0, 1fr) auto; padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 14px); }
+      .filters { grid-column: auto; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: calc(var(--gx) * -1); padding-left: var(--gx); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+      .filters::-webkit-scrollbar { display: none; }
+      .progress { display: none; }
+      .arrow { width: 44px; height: 44px; }
+    }
+
+
+    /* =========================================================
+       7. ACCESSIBILITÉ : vue liste, aide, lecteurs d'écran
+       ========================================================= */
+    .sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .sauter { position: fixed; left: 16px; top: -60px; z-index: 30; padding: 10px 16px; border-radius: 99px; background: var(--ui); color: #111; font-weight: 600; text-decoration: none; transition: top .2s; }
+    .sauter:focus { top: 12px; }
+    .slide :focus-visible { outline-offset: 2px; }
+    .vue[aria-pressed="true"] { background: var(--ui); color: #111; border-color: var(--ui); }
+
+    /* Petite aide « glissez » au-dessus du paquet, qui disparaît au premier geste */
+    .astuce {
+      --ah: calc(100svh - var(--top) - var(--bottom));
+      --w: min(calc(var(--ah) * 5 / 7), 84vw, 500px);
+      position: fixed; left: 0; right: 0; z-index: 2; margin: 0; text-align: center; pointer-events: none;
+      top: max(calc(var(--top) - 26px), calc(var(--top) + (var(--ah) - var(--w) * 7 / 5) / 2 - 34px));
+      font-size: 13px; opacity: .8; transition: opacity .6s ease;
+      animation: astuce 2.4s ease-in-out 1.2s 3;
+    }
+    .astuce.is-hidden { opacity: 0; }
+    .astuce-tel { display: none; }
+    @media (hover: none) { .astuce-pc { display: none; } .astuce-tel { display: inline; } }
+    @keyframes astuce { 50% { transform: translateX(8px); } }
+
+    /* Vue liste : toutes les cartes à plat, en grille, qui défilent */
+    .vue-liste .rail {
+      --lw: min(340px, calc(100vw - 2 * var(--gx)));   /* largeur d'une carte en vue liste */
+      overflow-y: auto; display: grid; align-items: start; justify-content: center; gap: 28px;
+      grid-template-columns: repeat(auto-fill, var(--lw));
+      padding: calc(var(--top) + 4px) var(--gx) calc(var(--bottom) + 24px);
+    }
+    .vue-liste .slide {
+      position: relative; left: auto; top: auto; width: var(--lw); height: calc(var(--lw) * 7 / 5); z-index: auto;
+      transform: none !important; opacity: 1 !important; pointer-events: auto !important;
+      animation: none; transition: none; cursor: default;
+    }
+    .vue-liste .slide::before { opacity: 0 !important; }
+    .vue-liste .slide .face > * { opacity: 1; transform: none; }
+    .vue-liste .progress, .vue-liste .arrows, .vue-liste .astuce { visibility: hidden; }
+    .vue-liste .scene { opacity: 0 !important; }
+    .vue-liste .head { background: linear-gradient(#0d0c0b 75%, transparent); padding-bottom: 18px; }
+    .vue-liste .foot { background: linear-gradient(transparent, #0d0c0b 30%); padding-top: 28px; }
+    @media (max-width: 600px) { .vue .vue-txt { display: none; } .vue { padding: 0 11px; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .slide, .astuce { animation: none; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================== EN-TÊTE ======================== -->
+  <a class="sauter" href="#rail" id="sauter">Voir toutes les cartes en liste</a>
+  <header class="head">
+    <h1 class="brand"><a href="#" data-goto="0">
+      <b>Vitrine &amp; Co</b>
+      <span>Création de sites vitrines pour artisans et commerçants, à Soual et dans le Tarn.</span>
+    </a></h1>
+    <nav class="links" aria-label="Contact">
+      <!-- ✏️ "Me contacter" amène à la dernière carte (contact) -->
+      <!-- Bouton vue liste / vue paquet (accessibilité : tout voir d'un coup, sans glisser) -->
+      <button class="pill vue" id="vue" type="button" aria-pressed="false" aria-label="Afficher en liste">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+        <span class="vue-txt">Vue liste</span>
+      </button>
+      <a class="pill" href="#contact" data-goto="last">Me contacter</a>
+      <!-- ✏️ Lien Instagram -->
+      <a class="pill" href="https://www.instagram.com/vitrine_and_co/" target="_blank" rel="noopener" aria-label="Instagram @vitrine_and_co">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        <span class="ig-name">@vitrine_and_co</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Fond studio derrière le paquet (couleur tirée de la carte du dessus, générée par le script) -->
+  <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+
+  <!-- Annonce le changement de carte aux lecteurs d'écran -->
+  <p class="sr" id="annonce" aria-live="polite"></p>
+  <p class="astuce" id="astuce" aria-hidden="true"><span class="astuce-pc">Glissez la carte, ou utilisez les flèches du clavier</span><span class="astuce-tel">Glissez la carte pour voir la suite</span> →</p>
+
+  <main class="rail" id="rail" aria-roledescription="carrousel" aria-label="Réalisations et contact" tabindex="0">
+
+    <!-- =================================================================
+         📌 VOS PROJETS : un bloc <article class="projet"> par réalisation.
+         -----------------------------------------------------------------
+         Ils sont écrits ici, dans le HTML, pour que Google les lise.
+         Le script les transforme ensuite en cartes à jouer.
+         Pour AJOUTER un projet : copiez un bloc <article> ... </article> entier,
+         collez-le à la suite et changez les textes. Filtres, compteur et
+         navigation se mettent à jour tout seuls.
+
+         Réglages (attributs data-…) :
+           data-categorie → catégorie des FILTRES (même texte = même filtre)
+           data-badge     → petit tag coloré (ex : "Boulangerie")
+           data-icone     → symbole des coins + illustration du téléphone :
+                            "pain", "feuille", "ciseaux", "eclair", "cheval" (ou "etoile")
+           data-domaine   → adresse du site (pour mémoire, non affichée)
+           data-accroche  → phrase affichée sur l'écran du téléphone (6 mots environ)
+           data-image     → capture d'écran du site SUR TÉLÉPHONE, de préférence en .webp
+                            ("images/fournee.webp", moins de 150 Ko),
+                            haut de page, ex : 780 × 1600 px. Elle remplit l'écran du
+                            téléphone (recadrée par le haut). Vide = écran dessiné.
+           --site-bar (dans style) → couleur de la barre d'état du téléphone : prenez
+                            la couleur tout en haut de la capture.
+           data-fond-image→ photo derrière le paquet (facultatif). Vide = dégradé lisse.
+           data-initiale  → lettre des coins (facultatif, sinon 1re lettre du badge)
+
+         Couleurs (attribut style) :
+           --bg        fond de la carte (et du fond d'écran)
+           --ink       texte de la carte (doit bien contraster avec --bg)
+           --accent    couleur forte (puces, bouton du mini-site)
+           --on-accent texte posé sur l'accent
+           --site-bg / --site-ink / --site-art  fond, texte et illustration du mini-site
+           --pfont     police du mini-site (à charger dans <link> Google Fonts en haut)
+           --site-radius  arrondi du mini-site ("0px" = carré, "20px" = doux)
+
+         Contenu :
+           <h2> titre · .client commerce et/ou ville · .desc 1 à 2 phrases
+           .feats points forts · .resultat chiffre clé · .avis avis client
+           a.cas  page « étude de cas » du projet (dossier realisations/), facultatif
+           a.lien lien du site ("#" tant qu'il n'est pas en ligne) ; son texte
+                  devient le bouton de la carte ("Voir le site" ou "Voir la démo")
+
+         ⚠️ data-exemple = chiffre ou avis FICTIF : la carte affiche « exemple ».
+            Remplacez par un vrai résultat / un vrai avis, puis SUPPRIMEZ data-exemple.
+         ================================================================= -->
+
+    <article class="projet" data-categorie="Alimentation" data-badge="Boulangerie" data-icone="pain"
+      data-domaine="vitrine-co.github.io/site-boulangerie" data-accroche="L'Art du Bon Pain à Soual" data-image="captures/la-fournee-de-soual.webp" data-fond-image=""
+      style="--site-bar:#f4efe6; --bg:#f4efe6; --ink:#1d1a16; --accent:#9c3f1c; --on-accent:#f4efe6; --site-bg:#f4efe6; --site-ink:#1d1a16; --site-art:#1f3d2f; --pfont:'Young Serif', Georgia, serif; --site-radius:6px">
+      <h2>La Fournée de Soual</h2>
+      <p class="client">Boulangerie artisanale · Soual (Tarn)</p>
+      <p class="desc">Les horaires, l'accès et une galerie gourmande, avec un formulaire de contact pour les commandes.</p>
+      <ul class="feats"><li>Horaires &amp; Accès</li><li>Galerie Photos</li></ul>
+      <p class="resultat" data-exemple><b>+35 %</b> de commandes de gâteaux</p>
+      <blockquote class="avis" data-exemple><p>« Les clients commandent leurs gâteaux sur le site : on gagne un temps fou au comptoir. »</p><cite>La gérante</cite></blockquote>
+      <a class="lien" href="https://vitrine-co.github.io/site-boulangerie/">Voir le site</a>
+      <a class="cas" href="realisations/la-fournee-de-soual.html">Étude de cas</a>
+    </article>
+
+    <article class="projet" data-categorie="Artisans &amp; BTP" data-badge="Paysagiste" data-icone="feuille"
+      data-domaine="vitrine-co.github.io/site-jardins-agout" data-accroche="Votre jardin, on s'en occupe." data-image="captures/les-jardins-de-l-agout.webp" data-fond-image=""
+      style="--site-bar:#283228; --bg:#2c4a36; --ink:#fbf9f4; --accent:#a9b59a; --on-accent:#1c2a21; --site-bg:#f5f2eb; --site-ink:#1c2a21; --site-art:#2c4a36; --pfont:'Archivo', sans-serif; --site-radius:0px">
+      <h2>Les Jardins de l'Agout</h2>
+      <p class="client">Paysagiste · Soual et autour de Castres</p>
+      <p class="desc">Prestations, réalisations en photos, avis clients et une demande de devis en quelques champs.</p>
+      <ul class="feats"><li>Devis en Ligne</li><li>Réalisations</li></ul>
+      <p class="resultat" data-exemple><b>18</b> demandes de devis par mois</p>
+      <blockquote class="avis" data-exemple><p>« Les photos avant / après font le travail : les devis arrivent déjà précis. »</p><cite>Le paysagiste</cite></blockquote>
+      <a class="lien" href="https://vitrine-co.github.io/site-jardins-agout/">Voir le site</a>
+      <a class="cas" href="realisations/les-jardins-de-l-agout.html">Étude de cas</a>
+    </article>
+
+    <article class="projet" data-categorie="Beauté &amp; Services" data-badge="Coiffure" data-icone="ciseaux"
+      data-domaine="vitrine-co.github.io/site-coiffure" data-accroche="Salon de coiffure et barbier à Soual" data-image="captures/salon-elegance.webp" data-fond-image=""
+      style="--site-bar:#f7f3ec; --bg:#2a2622; --ink:#f7f3ec; --accent:#d2ad5c; --on-accent:#2a2622; --site-bg:#f7f3ec; --site-ink:#2a2622; --site-art:#87661c; --pfont:'Instrument Serif', Georgia, serif; --site-radius:8px">
+      <h2>Salon Élégance</h2>
+      <p class="client">Coiffure &amp; barbier · Soual (Tarn)</p>
+      <p class="desc">Prestations et tarifs lisibles en deux gestes sur téléphone, avec prise de rendez-vous.</p>
+      <ul class="feats"><li>Tarifs &amp; Prestations</li><li>Mobile First</li></ul>
+      <p class="resultat" data-exemple><b>60 %</b> des rendez-vous pris en ligne</p>
+      <blockquote class="avis" data-exemple><p>« Mes clientes réservent le soir, quand le salon est fermé. »</p><cite>Sonia, coiffeuse</cite></blockquote>
+      <a class="lien" href="https://vitrine-co.github.io/site-coiffure/">Voir le site</a>
+    </article>
+
+    <article class="projet" data-categorie="Artisans &amp; BTP" data-badge="Électricité" data-icone="eclair"
+      data-domaine="vitrine-co.github.io/site-electricien" data-accroche="L'énergie maîtrisée, la sécurité assurée." data-image="captures/voltora.webp" data-fond-image=""
+      style="--site-bar:#040608; --bg:#050508; --ink:#e0e0e0; --accent:#00f0ff; --on-accent:#050508; --site-bg:#050508; --site-ink:#e0e0e0; --site-art:#00f0ff; --pfont:'Anton', Impact, sans-serif; --site-radius:2px">
+      <h2>Voltora</h2>
+      <p class="client">Électricien · Soual (Tarn)</p>
+      <p class="desc">Un bouton d'appel toujours visible, un estimateur de devis et les communes desservies.</p>
+      <ul class="feats"><li>Appel d'Urgence</li><li>Estimateur de Devis</li></ul>
+      <p class="resultat" data-exemple><b>×2</b> appels depuis le téléphone</p>
+      <blockquote class="avis" data-exemple><p>« Un bouton pour appeler, et le téléphone sonne. C'est tout ce que je voulais. »</p><cite>L'électricien</cite></blockquote>
+      <a class="lien" href="https://vitrine-co.github.io/site-electricien/">Voir le site</a>
+      <a class="cas" href="realisations/voltora.html">Étude de cas</a>
+    </article>
+
+    <article class="projet" data-categorie="Beauté &amp; Services" data-badge="Coaching / Sport" data-icone="cheval"
+      data-domaine="vitrine-co.github.io/site-elodie" data-accroche="Harmonie &amp; Performance à Cheval" data-image="captures/elodie-diebold.webp" data-fond-image=""
+      style="--site-bar:#2a463b; --bg:#2c4a3e; --ink:#f4f1ea; --accent:#c5a880; --on-accent:#1e332a; --site-bg:#f4f1ea; --site-ink:#2b2b2b; --site-art:#c5a880; --pfont:'Bodoni Moda', Didot, serif; --site-radius:0px">
+      <h2>Elodie Diebold</h2>
+      <p class="client">Coaching équestre · Nîmes et alentours</p>
+      <p class="desc">Approche, horaires, secteur et galerie, avec une prise de rendez-vous par formulaire.</p>
+      <ul class="feats"><li>Prise de Rendez-vous</li><li>Galerie Photos</li></ul>
+      <p class="resultat" data-exemple><b>100 %</b> des stages d'été complets</p>
+      <blockquote class="avis" data-exemple><p>« Les parents trouvent les dates de stage et réservent sans m'appeler. »</p><cite>La monitrice</cite></blockquote>
+      <a class="lien" href="https://vitrine-co.github.io/site-elodie/">Voir le site</a>
+      <a class="cas" href="realisations/elodie-diebold.html">Étude de cas</a>
+    </article>
+
+
+    <!-- =================================================================
+         📌 CARTE « QUI JE SUIS » : ta photo et ta zone d'intervention.
+         ✏️ PHOTO : mets ta photo dans le dossier du site (ex : photo-dimitri.webp,
+            format portrait, environ 600 × 750 px), puis remplace tout le bloc
+            <div class="photo-vide"> … </div> par :
+            <img src="photo-dimitri.webp" alt="Dimitri Couilleaux" width="600" height="750" loading="lazy">
+         ================================================================= -->
+    <section class="slide" id="qui" data-categorie="tous" aria-roledescription="carte" aria-label="Qui je suis"
+      style="--bg:#d8cab3; --ink:#271e17; --accent:#7a4a2c; --on-accent:#fbf4ea">
+      <div class="face info-carte">
+        <div class="top"><span class="index" aria-hidden="true"><b>D</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span><span class="badge">Qui je suis</span></div>
+        <div class="ic-body">
+          <div class="qui-haut">
+            <figure class="photo">
+              <div class="photo-vide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.7 3.7-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/></svg><span>Ta photo ici</span></div>
+            </figure>
+            <h2>Dimitri, créateur de sites à Soual.</h2>
+          </div>
+          <p>Je crée des sites vitrines pour les artisans et commerçants du Tarn. Un seul interlocuteur, du premier appel à la mise en ligne, et toujours joignable ensuite.</p>
+          <div>
+            <p class="zone-titre">Zone d'intervention</p>
+            <ul class="zone"><li>Soual</li><li>Castres</li><li>Mazamet</li><li>Lavaur</li><li>Graulhet</li><li>Albi</li></ul>
+          </div>
+          <p class="zone-note">Rendez-vous sur place dans le Tarn, en visio partout ailleurs.</p>
+        </div>
+        <div class="bottom"><a class="cta" href="#contact" data-goto="last">Me contacter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="index" aria-hidden="true"><b>D</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         📌 CARTE « MÉTHODE » : les étapes et leurs délais (5 jours au total).
+         ================================================================= -->
+    <section class="slide" id="methode" data-categorie="tous" aria-roledescription="carte" aria-label="Méthode"
+      style="--bg:#14323a; --ink:#e9efe9; --accent:#e3b76a; --on-accent:#14323a">
+      <div class="face info-carte">
+        <div class="top"><span class="index" aria-hidden="true"><b>4</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span><span class="badge">Méthode</span></div>
+        <div class="ic-body">
+          <h2>De l'appel au site en ligne : 5 jours.</h2>
+          <ol class="etapes">
+            <li><h3>Appel</h3><span class="delai">Jour 1</span><p>On parle de votre métier, de vos clients et de ce que le site doit faire.</p></li>
+            <li><h3>Maquette</h3><span class="delai">Jours 2 à 3</span><p>Je vous montre le site sur téléphone, vous demandez les changements.</p></li>
+            <li><h3>Mise en ligne</h3><span class="delai">Jour 5</span><p>Le site est publié, testé sur téléphone et sur ordinateur.</p></li>
+            <li><h3>Suivi</h3><span class="delai">Ensuite</span><p>Modifications, mises à jour et hébergement : 20 € par mois.</p></li>
+          </ol>
+        </div>
+        <div class="bottom"><a class="cta" href="#offres" data-goto="#offres">Voir les offres <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="index" aria-hidden="true"><b>4</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         📌 CARTE « OFFRES » : vos formules et leurs prix.
+         ✏️ Prix « à partir de », suivi mensuel et délai : modifiez-les directement ci-dessous.
+         🏷️ OFFRE DE LANCEMENT : <del> = prix normal (barré), <b> = prix remisé.
+            La date de fin est dans data-fin (format AAAA-MM-JJ) ET dans le texte.
+            Le lendemain de cette date, le script retire tout seul la remise :
+            le prix barré redevient le prix affiché et le bandeau disparaît.
+            Pour supprimer l'offre plus tôt : effacez le <p class="promo"> et les <del>.
+         ================================================================= -->
+    <section class="slide offres-carte" id="offres" data-categorie="*" aria-roledescription="carte" aria-label="Offres et tarifs"
+      style="--bg:#ebe4d8; --ink:#231b15; --accent:#9a4526; --on-accent:#fff7ef">
+      <div class="face offres">
+        <div class="top"><span class="index" aria-hidden="true"><b>€</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span><span class="badge">Offres</span></div>
+        <div class="off-body">
+          <h2>Trois formules, un prix clair.</h2>
+          <p class="promo" data-fin="2027-01-31">Offre de lancement jusqu'au 31 janvier 2027</p>
+          <ul class="formules">
+            <li><h3>Essentiel</h3><p class="prix">dès <del>290 €</del> <b>249 €</b></p>
+              <p class="detail">Une page soignée : services, horaires, plan d'accès et appel en un geste.</p></li>
+            <li><h3>Vitrine</h3><p class="prix">dès <del>590 €</del> <b>490 €</b></p>
+              <p class="detail">Jusqu'à 5 pages, galerie photos, formulaire de contact et référencement local.</p></li>
+            <li><h3>Sur-mesure</h3><p class="prix">dès <del>790 €</del> <b>690 €</b></p>
+              <p class="detail">Réservation, devis en ligne ou catalogue : selon votre métier.</p></li>
+          </ul>
+          <p class="off-note">Prix de départ. Suivi et mises à jour : 20 € / mois. Site livré en 5 jours environ.</p>
+        </div>
+        <div class="bottom"><a class="cta" href="#contact" data-goto="last">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="index" aria-hidden="true"><b>€</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span></div>
+      </div>
+    </section>
+
+
+    <!-- =================================================================
+         📌 CARTE FAQ : une question = un bloc <details>.
+         ⚠️ Réponses rédigées pour toi : vérifie-les (prix du nom de domaine,
+            propriété du site…), puis retire la ligne « Réponses à valider ».
+         ================================================================= -->
+    <section class="slide" id="faq" data-categorie="tous" aria-roledescription="carte" aria-label="Questions fréquentes"
+      style="--bg:#5a3d35; --ink:#f7ede5; --accent:#f0c3a8; --on-accent:#5a3d35">
+      <div class="face info-carte">
+        <div class="top"><span class="index" aria-hidden="true"><b>?</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span><span class="badge">Questions</span></div>
+        <div class="ic-body faq-body">
+          <h2>Vos questions, mes réponses.</h2>
+          <div class="faq defile">
+            <details name="faq" open><summary>Qui s'occupe du nom de domaine ?</summary><p>Je le réserve pour vous, à votre nom. Comptez environ 10 à 15 € par an.</p></details>
+            <details name="faq"><summary>Où est hébergé le site ?</summary><p>Sur GitHub Pages, un hébergement rapide et sécurisé. Il est compris dans le suivi à 20 € par mois.</p></details>
+            <details name="faq"><summary>Qui modifie le site ensuite ?</summary><p>Moi. Envoyez-moi un message avec le changement, je m'en occupe. C'est compris dans le suivi.</p></details>
+            <details name="faq"><summary>À qui appartient le site ?</summary><p>À vous : le nom de domaine, les textes et les photos sont à votre nom.</p></details>
+            <details name="faq"><summary>Combien de temps faut-il ?</summary><p>Environ 5 jours entre le premier appel et la mise en ligne, quand les textes et les photos sont prêts.</p></details>
+          </div>
+          <p class="off-note"><span class="ex">Réponses à valider</span></p>
+        </div>
+        <div class="bottom"><a class="cta" href="#contact" data-goto="last">Poser ma question <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="index" aria-hidden="true"><b>?</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         📌 CARTE CONTACT : formulaire + téléphone + e-mail.
+         Envoi direct par Web3Forms (gratuit, 250 messages / mois) : le message
+         arrive dans votre boîte mail, sans que le visiteur ouvre sa messagerie.
+         🔑 Clé Web3Forms : déjà collée dans le script (cherchez « CLE_WEB3FORMS »).
+            Cette clé est faite pour être visible dans la page : ce n'est pas un mot de passe.
+            Tant que la clé n'est pas collée, le bouton ouvre la messagerie
+            du visiteur avec le message prêt (ancien fonctionnement).
+         ✏️ Pour changer l'adresse affichée : ici (lien mailto) ET dans le script (EMAIL).
+            L'adresse qui REÇOIT les messages se règle sur web3forms.com.
+         ================================================================= -->
+    <section class="slide end" id="contact" data-categorie="*" aria-roledescription="carte" aria-label="Contact"
+      style="--bg:#2b231d; --ink:#f4efe6; --accent:#f4efe6; --on-accent:#2b231d">
+      <div class="face end">
+        <div class="top"><span class="index" aria-hidden="true"><b>&amp;</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span><span class="badge">Contact</span></div>
+        <div class="end-body">
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <h2>Et si la prochaine vitrine était la vôtre ?</h2>
+          <p class="lead">Quelques lignes sur votre activité suffisent pour commencer.</p>
+          <form class="form" id="contact-form" name="contact" action="https://api.web3forms.com/submit" method="post">
+            <label class="champ"><span>Nom et métier</span><input name="nom" autocomplete="name" required placeholder="Marie, fleuriste"></label>
+            <label class="champ"><span>E-mail ou téléphone</span><input name="contact" autocomplete="email" required placeholder="06… ou e-mail"></label>
+            <label class="champ plein"><span>Votre projet</span><textarea name="message" required placeholder="J'aimerais un site pour…"></textarea></label>
+            <!-- Piège à robots : invisible pour les humains, rempli par les robots (message alors ignoré) -->
+            <label class="piege" aria-hidden="true">Ne pas remplir <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
+          </form>
+          <p class="form-etat" id="form-etat" role="status" aria-live="polite"></p>
+          <p class="joindre">
+            <a href="tel:+33628517237">06 28 51 72 37</a>
+            <a href="mailto:vitrine-co@mail.fr">vitrine-co@mail.fr</a>
+            <span>Dimitri · Soual (Tarn)</span>
+            <a class="ml-lien" href="#mentions" data-mentions>Mentions légales</a>
+          </p>
+        </div>
+        <div class="bottom"><button class="cta" type="submit" form="contact-form"><span class="cta-txt">Envoyer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><span class="index" aria-hidden="true"><b>&amp;</b><svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/></svg></span></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================== BARRE DU BAS ======================== -->
+  <footer class="foot">
+    <div class="filters" id="filters" role="toolbar" aria-label="Filtrer par catégorie"></div>
+    <div class="progress">
+      <span id="count">1 / 1</span>
+      <div class="dots" id="dots"></div>
+    </div>
+    <p class="legal">© 2026 Vitrine &amp; Co<span class="legal-nom"> · Dimitri Couilleaux</span> · SIRET 131 088 478 00014 · <a href="#mentions" data-mentions>Mentions légales</a></p>
+    <div class="arrows">
+      <button class="arrow" id="prev" type="button" aria-label="Projet précédent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </button>
+      <button class="arrow" id="next" type="button" aria-label="Projet suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </footer>
+
+
+  <!-- =================================================================
+       📌 MENTIONS LÉGALES (obligatoires pour un site professionnel en France)
+       ================================================================= -->
+  <dialog class="mentions" id="mentions" aria-labelledby="mentions-titre">
+    <form method="dialog"><button class="fermer" aria-label="Fermer">×</button></form>
+    <h2 id="mentions-titre">Mentions légales</h2>
+    <h3>Éditeur du site</h3>
+    <p>Dimitri Couilleaux, Vitrine &amp; Co<br>
+       SIRET : 131 088 478 00014<br>
+       Adresse : Soual (81580)<br>
+       Téléphone : <a href="tel:+33628517237">06 28 51 72 37</a><br>
+       E-mail : <a href="mailto:vitrine-co@mail.fr">vitrine-co@mail.fr</a></p>
+    <h3>Directeur de la publication</h3>
+    <p>Dimitri Couilleaux</p>
+    <h3>Hébergement</h3>
+    <p>GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+    <h3>Données personnelles</h3>
+    <p>Ce site n'enregistre aucune donnée et ne dépose pas de cookie. Les informations du formulaire de contact (nom, coordonnées, message) sont transmises par e-mail à Vitrine &amp; Co via le service Web3Forms, servent uniquement à vous répondre et ne sont ni revendues ni utilisées pour de la publicité. Vous pouvez demander leur suppression à tout moment par e-mail.</p>
+  </dialog>
+
+  <script>
+  {
+    /* =================================================================
+       Les projets, les offres et le contact sont écrits dans le HTML
+       (plus haut, dans <main id="rail">). Ce script lit chaque
+       <article class="projet"> et le transforme en carte à jouer.
+       ================================================================= */
+
+    /* Libellés de l'interface */
+    const LIBELLE_TOUS = "Tous les projets";
+    const LIBELLE_CTA = "Voir la démo";
+    const LIBELLE_EXEMPLE = "exemple";            // mention affichée sur les chiffres et avis fictifs
+    const EMAIL = "vitrine-co@mail.fr";   // ✏️ adresse affichée (secours si l'envoi échoue)
+
+    /* =================================================================
+       ⚙️ À partir d'ici, pas besoin de modifier le code.
+       ================================================================= */
+    document.documentElement.classList.remove("no-js");
+    const rail = document.getElementById("rail");
+    const dotsEl = document.getElementById("dots");
+    const countEl = document.getElementById("count");
+    const filtersEl = document.getElementById("filters");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const fleche = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    const ex = (oui) => oui ? ` <span class="ex">· ${esc(LIBELLE_EXEMPLE)}</span>` : "";
+
+    /* Illustrations du mini-site (SVG, couleur = encre du mini-site) */
+    const ICONES = {
+      pain: '<path d="M14 66c0-22 16-38 36-38s36 16 36 38c0 6-4 10-10 10H24c-6 0-10-4-10-10z"/><path d="M34 40l-6 22M50 36l-4 26M66 40l-4 22" stroke="var(--site-art)" stroke-width="5" stroke-linecap="round"/>',
+      feuille: '<path d="M18 82C12 40 40 14 86 16c2 44-22 70-68 66z"/><path d="M18 82l46-46" stroke="var(--site-art)" stroke-width="4" stroke-linecap="round"/>',
+      ciseaux: '<circle cx="30" cy="72" r="12" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="70" cy="72" r="12" fill="none" stroke="currentColor" stroke-width="6"/><path d="M38 62L76 16 80 20 46 64zM62 62L24 16 20 20 54 64z"/>',
+      eclair: '<path d="M58 10L22 56h24l-8 34 40-48H54z"/>',
+      cheval: '<path d="M26 90c0-22 4-38 16-50l-8-16 14 9c18-7 34 0 42 16l-9 7-11-7c-4 12-4 25 3 41z"/><circle cx="58" cy="30" r="3.5" fill="var(--site-art)"/>',
+      etoile: '<path d="M50 12l11 24 26 3-19 18 5 26-23-13-23 13 5-26-19-18 26-3z"/>'
+    };
+
+    /* Lecture d'un <article class="projet"> écrit dans le HTML */
+    function lire(art) {
+      const q = (sel) => art.querySelector(sel);
+      const txt = (sel) => (q(sel)?.textContent || "").trim();
+      const d = art.dataset;
+      const res = q(".resultat"), avis = q(".avis");
+      return {
+        titre: txt("h2"), client: txt(".client"), description: txt(".desc"),
+        tags: [...art.querySelectorAll(".feats li")].map((li) => li.textContent.trim()),
+        lien: q("a.lien")?.getAttribute("href") || "#",
+        cta: (q("a.lien")?.textContent || "").trim(),
+        cas: q("a.cas")?.getAttribute("href") || "",
+        categorie: d.categorie || "", badge: d.badge || "", icone: d.icone, domaine: d.domaine, accroche: d.accroche,
+        image: d.image, fondImage: d.fondImage, initiale: d.initiale,
+        style: art.getAttribute("style") || "",
+        resultat: res && {
+          chiffre: (res.querySelector("b")?.textContent || "").trim(),
+          texte: [...res.childNodes].filter((n) => n.nodeName !== "B").map((n) => n.textContent).join("").trim(),
+          exemple: res.hasAttribute("data-exemple")
+        },
+        avis: avis && {
+          texte: (avis.querySelector("p")?.textContent || "").trim(),
+          auteur: (avis.querySelector("cite")?.textContent || "").trim(),
+          exemple: avis.hasAttribute("data-exemple")
+        }
+      };
+    }
+
+    /* Initiale affichée dans les coins de la carte (comme le "R" d'un roi) */
+    const initiale = (p) => (p.initiale || p.badge || p.titre || "?").trim().charAt(0).toUpperCase();
+    const symbole = (p) => `<svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">${ICONES[p.icone] || ICONES.etoile}</svg>`;
+    const index = (lettre, svg) => `<span class="index" aria-hidden="true"><b>${esc(lettre)}</b>${svg}</span>`;
+
+    /* Aperçu du site : capture si data-image est renseignée, sinon mini-site dessiné au format de la carte */
+    function apercu(p) {
+      const nom = esc(p.titre);
+      /* Écran du téléphone : capture mobile si data-image est renseignée, sinon mini-site dessiné */
+      const ecran = p.image
+        ? `<div class="screen capture"><img src="${esc(p.image)}" alt="Capture du site ${nom} sur téléphone" width="780" height="1600" loading="lazy" decoding="async"></div>`
+        : `<div class="screen" aria-hidden="true">
+             <div class="ph-top"><b>${nom}</b><i></i></div>
+             <h3>${esc(p.accroche)}</h3>
+             <span class="ph-btn">Appeler</span>
+             <div class="ph-art">${symbole(p)}</div>
+           </div>`;
+      const r = p.resultat && p.resultat.chiffre
+        ? `<p class="resultat"><span class="r-haut"><b>${esc(p.resultat.chiffre)}</b>${p.resultat.exemple ? `<span class="ex">${esc(LIBELLE_EXEMPLE)}</span>` : ""}</span><span>${esc(p.resultat.texte)}</span></p>`
+        : "";
+      return `<div class="vis"><div class="v-tel"><div class="phone">${ecran}</div></div>${r}</div>`;
+    }
+
+    function diapo(p) {
+      const externe = p.lien && p.lien !== "#" ? ' target="_blank" rel="noopener"' : "";
+      const avis = p.avis && p.avis.texte
+        ? `<blockquote class="avis"><p>${esc(p.avis.texte)}</p><cite>${esc(p.avis.auteur)}${ex(p.avis.exemple)}</cite></blockquote>`
+        : "";
+      return `
+        <article class="slide" data-categorie="${esc(p.categorie)}" data-fond-image="${esc(p.fondImage || "")}" style="${esc(p.style)}" aria-roledescription="carte" aria-label="${esc(p.titre)}">
+          <div class="face">
+            <div class="top">${index(initiale(p), symbole(p))}<span class="badge">${esc(p.badge)}</span></div>
+            ${apercu(p)}
+            <div class="info">
+              <p class="client">${esc(p.client)}</p>
+              <h2>${esc(p.titre)}</h2>
+              <p class="desc">${esc(p.description)}</p>
+              <ul class="feats">${(p.tags || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+              ${avis}
+            </div>
+            <div class="bottom"><span class="liens"><a class="cta" href="${esc(p.lien || "#")}"${externe}>${esc(p.cta || LIBELLE_CTA)} ${fleche}</a>${p.cas ? `<a class="cas-lien" href="${esc(p.cas)}">Étude de cas</a>` : ""}</span>${index(initiale(p), symbole(p))}</div>
+          </div>
+        </article>`;
+    }
+
+    /* Chaque projet du HTML devient une carte, à la même place */
+    const PROJETS = [...rail.querySelectorAll(":scope > .projet")].map((art) => {
+      const p = lire(art);
+      art.insertAdjacentHTML("beforebegin", diapo(p));
+      art.remove();
+      return p;
+    });
+    const slides = [...rail.querySelectorAll(".slide")];
+
+    /* Fond studio : une couche par carte, colorée d'après la carte (ou sa photo) */
+    const backdrop = document.getElementById("backdrop");
+    backdrop.innerHTML = slides.map((s, k) => {
+      const photo = s.dataset.fondImage;
+      const style = `--sbg:${s.style.getPropertyValue("--bg")}` + (photo ? `;background:url('${photo.replace(/'/g, "%27")}') center / cover` : "");
+      return `<div class="scene" data-for="${k}" style="${esc(style)}"></div>`;
+    }).join("");
+    const scenes = [...backdrop.children];
+
+    /* Fondu enchaîné : la nouvelle couleur passe au-dessus et apparaît, l'ancienne reste dessous */
+    let plan = 1, nettoyage;
+    function montrerScene(k) {
+      const sc = scenes[k];
+      if (!sc || sc.classList.contains("is-on")) return;
+      sc.style.zIndex = ++plan;
+      sc.classList.add("is-on");
+      clearTimeout(nettoyage);
+      nettoyage = setTimeout(() => scenes.forEach((x) => { if (x !== sc) x.classList.remove("is-on"); }), 1700);
+    }
+
+
+    /* Filtres générés à partir des catégories */
+    const categories = [...new Set(PROJETS.map((p) => p.categorie))];
+    filtersEl.innerHTML = [["*", LIBELLE_TOUS], ...categories.map((c) => [c, c])]
+      .map(([v, l], i) => `<button class="filter${i ? "" : " is-on"}" type="button" data-f="${esc(v)}" aria-pressed="${!i}">${esc(l)}</button>`).join("");
+
+    /* --- Navigation --- */
+    let visibles = slides;
+    let dejaAffiche = false;     // pas d'annonce au chargement de la page
+    let liste = false;           // vue liste (toutes les cartes à plat)
+    const annonce = document.getElementById("annonce");
+    const astuce = document.getElementById("astuce");
+    let actif = -1;
+    function aller(i) {
+      i = Math.max(0, Math.min(visibles.length - 1, i));
+      activer(i);
+    }
+
+    /* Place chaque carte dans le paquet selon sa distance à la carte active */
+    /* Emplacements dans le paquet : [décalage x, décalage y, rotation] selon la profondeur
+       0 = dessus, 1 = en haut à droite, 2 = en bas à gauche, 3 = en bas à droite */
+    const PLACES = [[0, 0, 0], [1.1, -.6, 2.4], [-1.3, .6, -3.4], [.5, 1, 4.2]];
+    const ANGLES = [-2.6, 1.8, -1.2, 2.9, -3.1, 1.1, -2.2, 2.4];   // léger désordre propre à chaque carte
+    function place(s, d) {
+      d = Math.max(0, Math.min(d, 3));
+      const [sx, sy, rot] = PLACES[d];
+      return { sx, sy, rot: d === 0 ? 0 : rot + ANGLES[slides.indexOf(s) % 8] * .35, sc: 1 - d * .015, voile: d * .14 };
+    }
+
+    function empiler() {
+      visibles.forEach((s, k) => {
+        const d = k - actif;
+        const p = place(s, d);
+        s.style.setProperty("--d", Math.max(0, Math.min(d, 3)));
+        s.style.setProperty("--sx", p.sx);
+        s.style.setProperty("--sy", p.sy);
+        s.style.setProperty("--rot", p.rot);
+        s.style.transform = "";
+        s.style.removeProperty("--voile");
+        s.classList.toggle("is-past", d < 0);
+        s.classList.toggle("is-far", d > 3);
+      });
+    }
+
+    /* Met à jour la carte active : couleurs de l'interface, compteur, points */
+    function activer(i) {
+      if (i === actif) return;
+      actif = i;
+      const s = visibles[i];
+      slides.forEach((x) => x.classList.toggle("is-active", x === s));
+      montrerScene(slides.indexOf(s));
+      empiler();
+      const st = getComputedStyle(s);
+      document.documentElement.style.setProperty("--slide-bg", st.getPropertyValue("--bg").trim());
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", st.getPropertyValue("--bg").trim());
+      countEl.textContent = `${i + 1} / ${visibles.length}`;
+      if (dejaAffiche) {
+        annonce.textContent = `Carte ${i + 1} sur ${visibles.length} : ${s.getAttribute("aria-label")}`;
+        astuce.classList.add("is-hidden");
+      }
+      dejaAffiche = true;
+      [...dotsEl.children].forEach((d, k) => d.classList.toggle("is-on", k === i));
+      prev.disabled = i === 0;
+      next.disabled = i === visibles.length - 1;
+    }
+
+    function construirePoints() {
+      dotsEl.innerHTML = visibles.map((s, k) => `<button class="dot" type="button" aria-label="Aller à : ${esc(s.getAttribute("aria-label"))}" data-k="${k}"></button>`).join("");
+    }
+
+    /* Glisser la carte du dessus (doigt ou souris).
+       Pendant le geste, la carte suit le doigt ET les cartes du dessous
+       remontent progressivement à leur nouvelle place. Au lâcher :
+       assez loin OU lancé assez vite → carte suivante / précédente. */
+    let glisse = null;
+    const lerp = (a, b, t) => a + (b - a) * t;
+    function mesures() {
+      const sonde = document.createElement("div");
+      sonde.style.cssText = "position:absolute;width:var(--px);height:0";
+      rail.appendChild(sonde);
+      const px = sonde.offsetWidth; sonde.remove();
+      return { px, tilt: parseFloat(getComputedStyle(visibles[actif]).getPropertyValue("--tilt")) || 1 };
+    }
+    rail.addEventListener("pointerdown", (e) => {
+      const s = e.target.closest(".slide.is-active");
+      if (liste || !s || e.button > 0) return;
+      if (e.target.closest("input, textarea, select, label, button")) return;   // on peut écrire dans le formulaire sans faire glisser la carte
+      glisse = { s, x: e.clientX, dx: 0, id: e.pointerId, t: performance.now(), v: 0, lx: e.clientX, lt: performance.now(), m: mesures(), w: s.offsetWidth };
+    });
+    rail.addEventListener("pointermove", (e) => {
+      if (!glisse || e.pointerId !== glisse.id) return;
+      const now = performance.now();
+      glisse.v = (e.clientX - glisse.lx) / Math.max(1, now - glisse.lt) * .6 + glisse.v * .4;   // vitesse lissée (px/ms)
+      glisse.lx = e.clientX; glisse.lt = now;
+      let dx = e.clientX - glisse.x;
+      if (!glisse.s.classList.contains("is-dragging")) {
+        if (Math.abs(dx) < 6) return;
+        glisse.s.classList.add("is-dragging");
+        glisse.s.setPointerCapture(glisse.id);
+        visibles.forEach((x) => x.classList.add("is-dragging"));
+      }
+      // Effet élastique s'il n'y a pas de carte dans ce sens
+      const bout = (dx < 0 && actif === visibles.length - 1) || (dx > 0 && actif === 0);
+      if (bout) dx = dx * .3;
+      glisse.dx = dx;
+      glisse.s.style.transform = `translateX(${dx}px) rotate(${dx / 45}deg)`;
+      // Cartes du dessous : elles avancent d'un cran au fur et à mesure (seulement vers la carte suivante)
+      const t = dx < 0 && !bout ? Math.min(1, -dx / (glisse.w * .75)) : 0;
+      const { px, tilt } = glisse.m;
+      for (let d = 1; d <= 4; d++) {
+        const c = visibles[actif + d];
+        if (!c) break;
+        const a = place(c, d), b = place(c, d - 1);
+        const sx = lerp(a.sx, b.sx, t), sy = lerp(a.sy, b.sy, t), rot = lerp(a.rot, b.rot, t), sc = lerp(a.sc, b.sc, t);
+        c.style.transform = `translate(${sx * px}px, ${sy * px}px) rotate(${rot * tilt}deg) scale(${sc})`;
+        c.style.setProperty("--voile", lerp(a.voile, b.voile, t));
+        if (d === 4) c.style.opacity = t;
+      }
+    }, { passive: true });
+    const finGlisse = () => {
+      if (!glisse) return;
+      const { s, dx, v } = glisse;
+      glisse = null;
+      if (!s.classList.contains("is-dragging")) return;
+      visibles.forEach((x) => { x.classList.remove("is-dragging"); x.style.opacity = ""; });
+      s.dataset.dragged = "1";              // évite d'ouvrir un lien en fin de glissement
+      setTimeout(() => delete s.dataset.dragged, 50);
+      const lance = Math.abs(v) > .45 && Math.abs(dx) > 24;
+      if (dx < -90 || (lance && v < 0)) aller(actif + 1);
+      else if (dx > 90 || (lance && v > 0)) aller(actif - 1);
+      empiler();                             // remet chaque carte à sa place, avec transition
+    };
+    rail.addEventListener("pointerup", finGlisse);
+    rail.addEventListener("pointercancel", finGlisse);
+
+    /* Clic sur une carte qui dépasse du paquet : elle passe devant */
+    rail.addEventListener("click", (e) => {
+      const s = e.target.closest(".slide");
+      if (!s) return;
+      if (s.dataset.dragged) { e.preventDefault(); return; }
+      if (!liste && !s.classList.contains("is-active")) { e.preventDefault(); aller(visibles.indexOf(s)); }
+    });
+    /* Navigation au clavier (Tab) : la carte qui reçoit le focus passe devant */
+    rail.addEventListener("focusin", (e) => {
+      const s = e.target.closest(".slide");
+      if (!liste && s && !s.classList.contains("is-active") && e.target.matches(":focus-visible") && visibles.includes(s)) aller(visibles.indexOf(s));
+    });
+    prev.addEventListener("click", () => aller(actif - 1));
+    next.addEventListener("click", () => aller(actif + 1));
+    dotsEl.addEventListener("click", (e) => { const d = e.target.closest(".dot"); if (d) aller(+d.dataset.k); });
+    document.querySelectorAll("[data-goto]").forEach((a) => a.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();   // sinon le clic remonte à la carte d'origine, qui repasserait devant
+      const g = a.dataset.goto;
+      const cible = g === "last" ? visibles.length - 1 : g.startsWith("#") ? visibles.indexOf(document.querySelector(g)) : +g || 0;
+      aller(cible < 0 ? 0 : cible);
+      if (liste) visibles[cible < 0 ? 0 : cible]?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+
+    /* Mentions légales : fenêtre par-dessus le site */
+    const mentions = document.getElementById("mentions");
+    document.querySelectorAll("[data-mentions]").forEach((a) => a.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      mentions.showModal();
+    }));
+
+    /* Clavier : flèches gauche / droite, Début / Fin */
+    document.addEventListener("keydown", (e) => {
+      if (mentions.open || liste) return;
+      if (e.target.closest("input, textarea, select")) return;
+      if (e.key === "ArrowRight" || e.key === "PageDown") { e.preventDefault(); aller(actif + 1); }
+      if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); aller(actif - 1); }
+      if (e.key === "Home") aller(0);
+      if (e.key === "End") aller(visibles.length - 1);
+    });
+
+    /* Molette verticale de la souris → projet suivant / précédent */
+    /* Un geste de molette ou de pavé tactile = une seule carte, même avec l'inertie */
+    let cumul = 0, geste = false, finGeste;
+    rail.addEventListener("wheel", (e) => {
+      if (liste || e.target.closest("textarea, .defile")) return;   // vue liste : défilement normal ; sinon laisse défiler le message ou la FAQ
+      e.preventDefault();
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      cumul += delta;
+      clearTimeout(finGeste);
+      finGeste = setTimeout(() => { cumul = 0; geste = false; }, 240);
+      if (!geste && Math.abs(cumul) > 40) { geste = true; aller(actif + (cumul > 0 ? 1 : -1)); }
+    }, { passive: false });
+
+    /* Filtrage : fondu, on garde les projets de la catégorie (+ la carte contact) */
+    filtersEl.addEventListener("click", (e) => {
+      const b = e.target.closest(".filter");
+      if (!b || b.classList.contains("is-on")) return;
+      filtersEl.querySelectorAll(".filter").forEach((x) => { x.classList.toggle("is-on", x === b); x.setAttribute("aria-pressed", x === b); });
+      const f = b.dataset.f;
+      rail.classList.add("is-fading");
+      setTimeout(() => {
+        slides.forEach((s) => { s.classList.remove("is-past", "is-far"); s.style.removeProperty("--d"); });
+        slides.forEach((s) => (s.hidden = !(f === "*" || s.dataset.categorie === f || s.dataset.categorie === "*")));
+        visibles = slides.filter((s) => !s.hidden);
+        construirePoints();
+        actif = -1;
+        aller(0);
+        rail.classList.remove("is-fading");
+      }, 350);
+    });
+
+
+    /* =========================================================
+       FORMULAIRE DE CONTACT (envoi direct par Web3Forms)
+       🔑 Collez ici votre clé d'accès Web3Forms (reçue par e-mail
+          après inscription gratuite sur https://web3forms.com).
+       ========================================================= */
+    const CLE_WEB3FORMS = "8ee609a3-cf43-4663-aebf-17852f9e4d0b";
+
+    const form = document.getElementById("contact-form");
+    const etat = document.getElementById("form-etat");
+    const btnEnvoi = document.querySelector('button[form="contact-form"]');
+    const btnTxt = btnEnvoi?.querySelector(".cta-txt");
+    const cleOk = /^[0-9a-f-]{30,}$/i.test(CLE_WEB3FORMS);
+
+    function ouvrirMessagerie(d) {   /* secours : messagerie du visiteur, message déjà rédigé */
+      const sujet = `Demande de site vitrine : ${d.get("nom")}`;
+      const corps = `${d.get("message")}\n\n${d.get("nom")}\nPour me répondre : ${d.get("contact")}`;
+      location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
+    }
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const d = new FormData(form);
+      if (d.get("botcheck")) return;                       /* robot : on ignore sans rien dire */
+      if (!cleOk) {
+        ouvrirMessagerie(d);
+        etat.textContent = "Votre messagerie s'ouvre avec le message prêt : il ne reste qu'à l'envoyer. Rien ne s'ouvre ? Écrivez à l'adresse ci-dessous.";
+        return;
+      }
+      btnEnvoi.disabled = true; btnTxt.textContent = "Envoi…"; etat.textContent = "";
+      try {
+        const rep = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: CLE_WEB3FORMS,
+            subject: `Nouvelle demande de site : ${d.get("nom")}`,
+            from_name: "Site Vitrine & Co",
+            nom: d.get("nom"), contact: d.get("contact"), message: d.get("message"),
+            /* si le visiteur a laissé un e-mail, « Répondre » lui écrit directement */
+            ...(/\S+@\S+\.\S+/.test(d.get("contact")) ? { replyto: d.get("contact") } : {}),
+          }),
+        });
+        const res = await rep.json().catch(() => ({}));
+        if (!rep.ok || !res.success) throw new Error(res.message || rep.status);
+        form.reset();
+        btnTxt.textContent = "Envoyé ✓";
+        etat.textContent = "Merci, votre message est bien arrivé. Je vous réponds au plus vite.";
+      } catch (err) {
+        btnEnvoi.disabled = false; btnTxt.textContent = "Réessayer";
+        etat.textContent = "L'envoi n'a pas marché (connexion ?). Réessayez, ou écrivez directement à " + EMAIL + " ou au 06 28 51 72 37.";
+      }
+    });
+
+    /* Vue liste / vue paquet. Le choix est retenu sur cet appareil. */
+    const vueBtn = document.getElementById("vue");
+    function vue(enListe) {
+      liste = enListe;
+      document.documentElement.classList.toggle("vue-liste", liste);
+      vueBtn.setAttribute("aria-pressed", liste);
+      vueBtn.setAttribute("aria-label", liste ? "Afficher en paquet de cartes" : "Afficher en liste");
+      vueBtn.querySelector(".vue-txt").textContent = liste ? "Vue paquet" : "Vue liste";
+      rail.setAttribute("aria-roledescription", liste ? "liste" : "carrousel");
+      rail.scrollTop = 0;
+      try { localStorage.setItem("vitrine-vue", liste ? "liste" : "paquet"); } catch (err) {}
+      if (!liste) empiler();
+    }
+    vueBtn.addEventListener("click", () => vue(!liste));
+    document.getElementById("sauter").addEventListener("click", (e) => { e.preventDefault(); vue(true); rail.focus(); });
+    try { if (localStorage.getItem("vitrine-vue") === "liste") vue(true); } catch (err) {}
+
+    construirePoints();
+    let depart = null;
+    try { depart = location.hash.length > 1 && document.querySelector(location.hash.replace(/[^#\w-]/g, "")); } catch (err) {}
+    aller(depart && visibles.includes(depart) ? visibles.indexOf(depart) : 0);
+  }
+  
+  /* Offre de lancement : après la date data-fin, on retire la remise (prix barré = prix affiché) */
+  (function () {
+    var promo = document.querySelector(".promo[data-fin]");
+    if (!promo) return;
+    var fin = new Date(promo.dataset.fin + "T23:59:59");
+    if (isNaN(fin) || new Date() <= fin) return;
+    promo.remove();
+    document.querySelectorAll(".formules .prix").forEach(function (p) {
+      var ancien = p.querySelector("del"), remise = p.querySelector("b");
+      if (ancien && remise) { remise.textContent = ancien.textContent; ancien.remove(); }
+    });
+  })();
+</script>
+</body>
+</html>
