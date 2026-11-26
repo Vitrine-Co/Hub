@@ -88,7 +88,7 @@
     body {
       margin: 0;
       /* Le fond de la page prend une version sombre des couleurs de la carte du dessus */
-      background-color: color-mix(in srgb, var(--slide-bg, #16110d) 48%, #0b0a09);
+      background-color: #0d0c0b;   /* fixe : changer une couleur sur <html> à chaque carte recalculait toute la page */
       color: var(--ui);
       font: 16px/1.55 var(--font);
       overflow: hidden;
@@ -172,16 +172,21 @@
       to   { translate: 0 0; opacity: 1; }
     }
     /* Voile sombre sur les cartes du dessous */
-    .slide::before {
-      content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none;
-      background: #000; opacity: var(--voile, calc(var(--d, 0) * .14));
+    /* (un vrai élément <i class="voile">, ajouté par le script : pendant le glisser,
+        on change directement son opacité, sans recalculer tout le contenu de la carte) */
+    .slide > .voile {
+      position: absolute; inset: 0; z-index: 5; pointer-events: none;
+      background: #000; opacity: calc(var(--d, 0) * .14);
       transition: opacity .6s var(--ease);
     }
+    .slide.is-dragging > .voile { transition: none; }
     .slide.is-active { cursor: grab; box-shadow: 0 1px 0 rgba(255,255,255,.16) inset, 0 50px 90px -40px rgba(0,0,0,.85); }
     .slide.is-dragging { transition: none; }   /* pendant le geste, les cartes suivent le doigt sans retard */
     .slide.is-active.is-dragging { cursor: grabbing; }
     .slide.is-past { transform: translateX(calc(-100vw - 10%)) rotate(-8deg); opacity: 0; pointer-events: none; }
     .slide.is-far { opacity: 0; pointer-events: none; }
+    /* Cartes hors du paquet : masquées une fois sorties (le navigateur ne les dessine plus) */
+    .slide.is-past, .slide.is-far { visibility: hidden; transition: transform .62s cubic-bezier(.2, .85, .25, 1), opacity .5s ease, visibility 0s .62s; }
 
     /* --- Intérieur de la carte --- */
     .face {
@@ -433,10 +438,11 @@
           color-mix(in srgb, var(--sbg) 34%, #121110) 58%,
           color-mix(in srgb, var(--sbg) 16%, #0b0a09) 100%);
       background-size: cover; background-position: center;
-      will-change: opacity;
     }
     /* La nouvelle couleur apparaît PAR-DESSUS l'ancienne (fondu enchaîné, sans flash) */
-    .scene.is-on { opacity: 1; transition: opacity 1.4s ease; }
+    .scene { display: none; }   /* seules les 2 couleurs en cours de fondu sont dessinées */
+    .scene.is-on { display: block; opacity: 1; animation: fondu 1.4s ease both; }
+    @keyframes fondu { from { opacity: 0; } }
     /* Ombre douce posée sous le paquet, pour l'ancrer */
     .backdrop::after {
       content: ""; position: absolute; inset: 0; z-index: 9999;
@@ -551,7 +557,7 @@
       transform: none !important; opacity: 1 !important; pointer-events: auto !important;
       animation: none; transition: none; cursor: default;
     }
-    .vue-liste .slide::before { opacity: 0 !important; }
+    .vue-liste .slide > .voile { opacity: 0 !important; }
     .vue-liste .slide .face > * { opacity: 1; transform: none; }
     .vue-liste .progress, .vue-liste .arrows, .vue-liste .astuce { visibility: hidden; }
     .vue-liste .scene { opacity: 0 !important; }
@@ -617,7 +623,7 @@
            data-accroche  → phrase affichée sur l'écran du téléphone (6 mots environ)
            data-image     → capture d'écran du site SUR TÉLÉPHONE, de préférence en .webp
                             ("images/fournee.webp", moins de 150 Ko),
-                            haut de page, ex : 780 × 1600 px. Elle remplit l'écran du
+                            haut de page, ex : 480 × 985 px (largeur 480 px suffit). Elle remplit l'écran du
                             téléphone (recadrée par le haut). Vide = écran dessiné.
            --site-bar (dans style) → couleur de la barre d'état du téléphone : prenez
                             la couleur tout en haut de la capture.
@@ -968,7 +974,7 @@
       const nom = esc(p.titre);
       /* Écran du téléphone : capture mobile si data-image est renseignée, sinon mini-site dessiné */
       const ecran = p.image
-        ? `<div class="screen capture"><img src="${esc(p.image)}" alt="Capture du site ${nom} sur téléphone" width="780" height="1600" loading="lazy" decoding="async"></div>`
+        ? `<div class="screen capture"><img src="${esc(p.image)}" alt="Capture du site ${nom} sur téléphone" width="480" height="985" decoding="async"></div>`
         : `<div class="screen" aria-hidden="true">
              <div class="ph-top"><b>${nom}</b><i></i></div>
              <h3>${esc(p.accroche)}</h3>
@@ -1011,6 +1017,7 @@
       return p;
     });
     const slides = [...rail.querySelectorAll(".slide")];
+    slides.forEach((s) => s.insertAdjacentHTML("beforeend", '<i class="voile" aria-hidden="true"></i>'));
 
     /* Fond studio : une couche par carte, colorée d'après la carte (ou sa photo) */
     const backdrop = document.getElementById("backdrop");
@@ -1070,7 +1077,7 @@
         s.style.setProperty("--sy", p.sy);
         s.style.setProperty("--rot", p.rot);
         s.style.transform = "";
-        s.style.removeProperty("--voile");
+        s.lastElementChild.style.opacity = "";
         s.classList.toggle("is-past", d < 0);
         s.classList.toggle("is-far", d > 3);
       });
@@ -1085,7 +1092,6 @@
       montrerScene(slides.indexOf(s));
       empiler();
       const st = getComputedStyle(s);
-      document.documentElement.style.setProperty("--slide-bg", st.getPropertyValue("--bg").trim());
       document.querySelector('meta[name="theme-color"]')?.setAttribute("content", st.getPropertyValue("--bg").trim());
       countEl.textContent = `${i + 1} / ${visibles.length}`;
       if (dejaAffiche) {
@@ -1136,7 +1142,13 @@
       // Effet élastique s'il n'y a pas de carte dans ce sens
       const bout = (dx < 0 && actif === visibles.length - 1) || (dx > 0 && actif === 0);
       if (bout) dx = dx * .3;
-      glisse.dx = dx;
+      glisse.dx = dx; glisse.bout = bout;
+      if (!glisse.raf) glisse.raf = requestAnimationFrame(dessinerGlisse);   // au plus une mise à jour par image
+    }, { passive: true });
+    function dessinerGlisse() {
+      if (!glisse) return;
+      glisse.raf = 0;
+      const { dx, bout } = glisse;
       glisse.s.style.transform = `translateX(${dx}px) rotate(${dx / 45}deg)`;
       // Cartes du dessous : elles avancent d'un cran au fur et à mesure (seulement vers la carte suivante)
       const t = dx < 0 && !bout ? Math.min(1, -dx / (glisse.w * .75)) : 0;
@@ -1147,13 +1159,14 @@
         const a = place(c, d), b = place(c, d - 1);
         const sx = lerp(a.sx, b.sx, t), sy = lerp(a.sy, b.sy, t), rot = lerp(a.rot, b.rot, t), sc = lerp(a.sc, b.sc, t);
         c.style.transform = `translate(${sx * px}px, ${sy * px}px) rotate(${rot * tilt}deg) scale(${sc})`;
-        c.style.setProperty("--voile", lerp(a.voile, b.voile, t));
+        c.lastElementChild.style.opacity = lerp(a.voile, b.voile, t);   // le voile (<i class="voile">)
         if (d === 4) c.style.opacity = t;
       }
-    }, { passive: true });
+    }
     const finGlisse = () => {
       if (!glisse) return;
-      const { s, dx, v } = glisse;
+      const { s, dx, v, raf } = glisse;
+      cancelAnimationFrame(raf);
       glisse = null;
       if (!s.classList.contains("is-dragging")) return;
       visibles.forEach((x) => { x.classList.remove("is-dragging"); x.style.opacity = ""; });
