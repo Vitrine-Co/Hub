@@ -576,6 +576,7 @@
     .vue-liste .slide {
       position: relative; left: auto; top: auto; width: var(--lw); height: calc(var(--lw) * 7 / 5); z-index: auto;
       transform: none !important; opacity: 1 !important; pointer-events: auto !important;
+      visibility: visible !important;   /* les cartes sorties du paquet (is-past / is-far) sont masquées en vue paquet : on les réaffiche ici */
       animation: none; transition: none; cursor: default;
     }
     .vue-liste .slide > .voile { opacity: 0 !important; }
